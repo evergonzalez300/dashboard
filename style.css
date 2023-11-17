@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.inicio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.div-btn button {
+    background-color: black;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.features,
+.about,
+.contact {
+    margin-bottom: 4rem;
+}
+
+/* Estilos para el formulario emergente */
+.contenedor-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-popup {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.input-group input {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para ajustar el contenido al 75% del ancho y alto de la página */
+.contenido-popup {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: left;
+    width: 75%;
+    height: 75%;
+    max-width: 1000px;
+    max-height: 75%;
+    margin: 12.5% auto; /* Centrado vertical y horizontal */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Añadido para scroll si el contenido excede */
+}
+
+/* Estilos mejorados para el formulario */
+.contenido-popup {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+    width: 75%;
+    height: 75%;
+    max-width: 800px;
+    max-height: 75%;
+    margin: 12.5% auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #4CAF50;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="#4CAF50" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    padding-right: 30px;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 12px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos para la barra de desplazamiento WebKit */
+.contenido-popup {
+    /* ... Tus estilos anteriores ... */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Para navegadores compatibles con Firefox */
+    scrollbar-color: #4CAF50 #f9f9f9; /* Para navegadores compatibles con Firefox */
+}
+
+/* Estilos específicos para WebKit */
+/* Ancho de la barra de desplazamiento */
+.contenido-popup::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Estilo del riel */
+.contenido-popup::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
+}
+
+/* Estilo del "thumb" (la parte deslizable) */
+.contenido-popup::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 5px;
+}
+
+/* Al hacer hover en la barra de desplazamiento */
+.contenido-popup::-webkit-scrollbar-thumb:hover {
+    background-color: #45a049;
+}
+
+
+nav h1 {
+    text-align: center;
+}
+
+.imagen-fondo {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+main {
+
+    min-width: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-inicio {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+}
+
+.inicio {
+    position: absolute;
+    right: 50px;
+    top: 100px;
+}
